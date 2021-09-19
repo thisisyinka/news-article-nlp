@@ -1,0 +1,49 @@
+section {
+    border: 1px solid #272727;
+    width: 70%;
+    padding: 70px 0;
+    margin: 0 auto;
+
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+form {
+    text-align: center;
+}
+
+form label {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+#theurl {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #272727;
+}
+
+#send {
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.result-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 0;
+    border: 1px solid #272727;
+    border-radius: 5px;
+    width: 50%;
+    margin: 50px auto;
+}

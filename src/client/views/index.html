@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/form.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <title>News Article Evaluation</title>
+  </head>
+  <body>
+    <main>
+      <div class="heading">
+        <h1>Article Sentiment Analysis</h1>
+      </div>
+      <section>
+        <div class="form">
+          <form onsubmit="return News.analyseLanguage(event)">
+            <label for="url">Please enter a URL</label>
+            <br />
+            <br />
+            <input
+              type="text"
+              id="theurl"
+              name="url"
+              placeholder="e.g. https://en.wikipedia.org/wiki/Batman"
+            />
+            <br />
+            <br />
+            <input
+              type="submit"
+              name=""
+              id="send"
+              value="submit"
+              onclick="return News.analyseLanguage(event)"
+              onsubmit="return analyseLanguage(event)"
+            />
+            <!-- <button id="send" type="submit">Submit</button> -->
+          </form>
+        </div>
+        <div class="analysis-results">
+          <div class="status">
+            <p class="status-content"></p>
+          </div>
+          <div class="sub">
+            <p class="sub-content"></p>
+          </div>
+          <div class="agreement">
+            <p class="agreement-content"></p>
+          </div>
+          <div class="confidence">
+            <p class="confidence-content"></p>
+          </div>
+          <div class="irony">
+            <p class="irony-content"></p>
+          </div>
+          <div class="url">
+            <p class="url-content"></p>
+          </div>
+        </div>
+        <div class="errors"></div>
+      </section>
+    </main>
+    <footer class="footer-wrapper">
+      <div class="footer">
+        <span class="footertext">
+          &copy; 2021. Udacity Natual Language Processing Project by Layinka.
+        </span>
+      </div>
+    </footer>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+    </script>
+  </body>
+</html>
