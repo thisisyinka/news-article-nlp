@@ -2,9 +2,6 @@
     "name": "nlp-news-article",
     "version": "1.0.0",
     "main": "index.js",
-    "jest": {
-        "testEnvironment": "jsdom"
-    },
     "scripts": {
         "test": "jest --env=jsdom",
         "start": "node src/server/index.js",
