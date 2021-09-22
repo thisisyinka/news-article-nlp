@@ -44,11 +44,25 @@ form label {
     padding: 15px 0;
     border: 1px solid #272727;
     border-radius: 5px;
-    width: 50%;
+    width: 60%;
     margin: 50px auto;
+    line-height: 2rem;
 }
 
-.errors {
-    color: red;
+.good, .bad, .analysis-results {
     text-align: center;
+    margin-top: 30px;
+}
+
+.bad {
+    color: red;
+}
+
+.good, .bold {
+    color: green;
+}
+
+.bold {
+    font-weight: 700;
+    font-size: 18px;
 }

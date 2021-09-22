@@ -26,8 +26,12 @@ app.post('/entry', (req, res) => {
     const theURL = req.body.url;
 
     axios.post(`${baseURL}key=${apiKey}&url=${theURL}&lang=en`)
-        .then(function (response) { console.log(response.data) })
+        .then(function (response) { 
+            console.log(response.data);
+            res.send(response.data).status(200);
+        })
         .catch(function (error) {
             console.log('Nothing happened', error);
+            res.send(error).status(500);
         })
 })
